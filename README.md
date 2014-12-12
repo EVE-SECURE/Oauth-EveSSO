@@ -1,22 +1,20 @@
 WordpressSocialLogin-EveSSO
 ===========================
 
-SSO provider for wordpress Social Login
+SSO provider for HybridAuth, developed to be a replacement for the current Foursquare plugin to OAuth
+
+config.php may be editable to add a config field to the admin interface for eve
 
 https://wordpress.org/plugins/wordpress-social-login/
 
 Provided with no warranty
 
+Rename the EVESSO.php to Foursquare.php, you are replacing an existing plugin since OAuth isnt easily expandable
 
+Put Foursquare.php file into /projectsteak/components/com_oauth/libraries/Hybrid/Providers - replacing the current one
 
+Then turn it on. you'll need to fill the details into the foursquare field from developers.eveonline.com where you'll have created a new application.
 
-Add the details in wsl.providers.php to the file with the same name in wp-content/plugins/wordpress-social-login/includes/settings
-
-drop the EveSSO.php file into wp-content/plugins/wordpress-social-login/hybridauth/Hybrid/Providers
-
-Then turn it on. you'll need to fill the details in from developers.eveonline.com where you'll have created a new application.
-
-The callback url is like https://yoursite.com/wordpress/wp-content/plugins/wordpress-social-login/hybridauth/?hauth.done=EveSSO 
+The callback url is like http://yoursite.com/index.php?option=com_oauth&task=login.endpoint
 you'll find yours from clicking 'Where do I get this info?' after turning it on.
 
-I'm not providing a picture, so you'll want to flip it over to using the text version, or find out where to drop in an appropriate picture.
