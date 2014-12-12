@@ -7,8 +7,11 @@
 
 /**
 * Hybrid_Providers_EveSSO (By Steve Anderson)
+* Code added by Joel Falknau (Ariel Rin) in order to work with joomla
+*
+* Currently named Foursquare to replace the existing foursquare plugin in OAuth, to be resolved better
 */
-class Hybrid_Providers_EveSSO extends Hybrid_Provider_Model_OAuth2
+class Hybrid_Providers_Foursquare extends Hybrid_Provider_Model_OAuth2
 {
         // default permissions
         public $scope = "";
@@ -107,6 +110,7 @@ class Hybrid_Providers_EveSSO extends Hybrid_Provider_Model_OAuth2
                 $this->user->profile->displayName = @ $response->CharacterName;
                 $this->user->profile->profileURL  = "https://forums.eveonline.com/profile/".urlencode($response->CharacterName);
                 $this->user->profile->photoURL  = "https://image.eveonline.com/character/".$response->CharacterID."_64.jpg";
+				$this->user->profile->email  = "dummy@dummy.com";
 
                 if( $this->user->profile->identifier ){
                         return $this->user->profile;
