@@ -11,7 +11,7 @@
 *
 * Currently named Foursquare to replace the existing foursquare plugin in OAuth, to be resolved better
 */
-class Hybrid_Providers_Foursquare extends Hybrid_Provider_Model_OAuth2
+class Hybrid_Providers_EveSSO extends Hybrid_Provider_Model_OAuth2
 {
         // default permissions
         public $scope = "";
