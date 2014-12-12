@@ -110,7 +110,7 @@ class Hybrid_Providers_Foursquare extends Hybrid_Provider_Model_OAuth2
                 $this->user->profile->displayName = @ $response->CharacterName;
                 $this->user->profile->profileURL  = "https://forums.eveonline.com/profile/".urlencode($response->CharacterName);
                 $this->user->profile->photoURL  = "https://image.eveonline.com/character/".$response->CharacterID."_64.jpg";
-				$this->user->profile->email  = "dummy@dummy.com";
+		$this->user->profile->email  = urlencode($response->CharacterName)."@dummy.com";
 
                 if( $this->user->profile->identifier ){
                         return $this->user->profile;
