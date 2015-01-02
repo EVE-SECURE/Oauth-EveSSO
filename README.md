@@ -1,7 +1,7 @@
-WordpressSocialLogin-EveSSO
+OAuth-EveSSO
 ===========================
 
-SSO provider for HybridAuth, developed to be a replacement for the current Foursquare plugin to OAuth
+SSO provider for HybridAuth based plugins, developed to be a replacement for the current Foursquare plugin to OAuth
 
 config.php may be editable to add a config field to the admin interface for eve
 
